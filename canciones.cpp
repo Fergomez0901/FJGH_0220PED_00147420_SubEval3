@@ -60,11 +60,13 @@ void menu(queue<Cancion> feliz, queue<Cancion> triste, queue<Cancion> estudio){
                 switch(opcion2)
                 {
                     case 1: 
-                        cout << "Ingrese el titulo de la cancion: " << endl; 
-                        cin >> cancion.titulo;
-                        cout << "Ingrese el nombre del cantante: " << endl; 
-                        cin >> cancion.cantante;
-                        cout << "Ingrese el genero de la cancion: " << endl; 
+                        cin.ignore(); 
+                        cout << "Ingrese el titulo de la cancion: " << endl;
+                        getline(cin, cancion.titulo);
+                        cout << "Ingrese el nombre del cantante: " << endl;
+                        getline(cin, cancion.cantante);
+                        cout << "Ingrese el genero de la cancion: " << endl;
+                        getline(cin, cancion.genero); 
                         do
                         {
                             cout << "Ingrese la duracion de la cancion: " << endl; 
@@ -74,12 +76,14 @@ void menu(queue<Cancion> feliz, queue<Cancion> triste, queue<Cancion> estudio){
                         feliz.push(cancion);
                         break; 
 
-                    case 2: 
+                    case 2:
+                        cin.ignore(); 
                         cout << "Ingrese el titulo de la cancion: " << endl; 
-                        cin >> cancion.titulo;
+                        getline(cin, cancion.titulo);
                         cout << "Ingrese el nombre del cantante: " << endl; 
-                        cin >> cancion.cantante;
-                        cout << "Ingrese el genero de la cancion: " << endl; 
+                        getline(cin, cancion.cantante);
+                        cout << "Ingrese el genero de la cancion: " << endl;
+                        getline(cin, cancion.genero); 
                         do
                         {
                             cout << "Ingrese la duracion de la cancion: " << endl; 
@@ -90,11 +94,13 @@ void menu(queue<Cancion> feliz, queue<Cancion> triste, queue<Cancion> estudio){
                         break; 
 
                     case 3:
+                        cin.ignore();
                         cout << "Ingrese el titulo de la cancion: " << endl; 
-                        cin >> cancion.titulo;
+                        getline(cin, cancion.titulo);
                         cout << "Ingrese el nombre del cantante: " << endl; 
-                        cin >> cancion.cantante;
+                        getline(cin, cancion.cantante);
                         cout << "Ingrese el genero de la cancion: " << endl; 
+                        getline(cin, cancion.genero); 
                         do
                         {
                             cout << "Ingrese la duracion de la cancion: " << endl; 
@@ -128,7 +134,7 @@ void menu(queue<Cancion> feliz, queue<Cancion> triste, queue<Cancion> estudio){
                         showQueue(triste);
                         break; 
                     case 3:
-                        cout << "Mostrando cola..." << endl; 
+                        cout << "Mostrando cola: " << endl << endl; 
                         showQueue(estudio);
                         break; 
                     default:
